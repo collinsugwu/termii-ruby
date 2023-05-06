@@ -1,0 +1,3 @@
+class TermiiToken < Termii
+    
+end
