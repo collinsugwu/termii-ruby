@@ -16,6 +16,7 @@ module TermiiRuby
 
             msg = "unsuccessful request with status code #{response.status}"
             raise TermiiRuby::Error, msg
+        
         end
 
         def make_post_request(endpoint, args = {})

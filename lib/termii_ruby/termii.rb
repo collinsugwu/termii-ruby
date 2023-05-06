@@ -1,4 +1,5 @@
 class Termii
+    
     include Mixins::Endpoints
 
     def verify

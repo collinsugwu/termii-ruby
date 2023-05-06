@@ -14,6 +14,6 @@ class TermiiSender < Termii
     end
 
     def fetch_sender
-        @client.make_get_request(FETCH_SENDER, data)
+        @client.make_get_request(FETCH_SENDER)
     end
 end
