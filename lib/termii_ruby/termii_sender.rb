@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 # Performs sender operation
+require_relative "termii"
+require_relative "client"
 
 module TermiiRuby
-  class TermiiSender < Termii
+  class TermiiSender < TermiiRuby::Termii
     def initialize(api_key)
-      super(api_key)
-      @client = SportsData::Client.new(@api_key)
+      @client = TermiiRuby::Client.new(api_key)
     end
 
     def create_sender(sender_id, usecase, company)
@@ -21,5 +22,7 @@ module TermiiRuby
     def fetch_sender
       @client.make_get_request(FETCH_SENDER)
     end
+
+    def verify; end
   end
 end

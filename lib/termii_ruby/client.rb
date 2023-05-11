@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 # Handles external request to termii
+require "faraday"
+require "faraday/retry"
 
 module TermiiRuby
   class Client

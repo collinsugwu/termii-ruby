@@ -1,19 +1,20 @@
 # frozen_string_literal: true
 
 # Performs token operation
+require_relative "termii"
+require_relative "client"
 
 module TermiiRuby
-  class TermiiToken < Termii
-    const MESSAGE_TYPE = "NUMERIC"
-    const CHANNEL = "generic"
-    const PIN_ATTEMPTS = 3
-    const PIN_LENGTH = 4
-    const PIN_TIME_TO_LEAVE = 1
-    const PIN_PLACEHOLDER = "< _pin_ >"
+  class TermiiToken < TermiiRuby::Termii
+    MESSAGE_TYPE = "NUMERIC"
+    CHANNEL = "generic"
+    PIN_ATTEMPTS = 3
+    PIN_LENGTH = 4
+    PIN_TIME_TO_LEAVE = 1
+    PIN_PLACEHOLDER = "< _pin_ >"
 
     def initialize(api_key)
-      super(api_key)
-      @client = SportsData::Client.new(@api_key)
+      @client = TermiiRuby::Client.new(api_key)
     end
 
     def send_otp_token(to, from, message_text, channel = CHANNEL, message_type = MESSAGE_TYPE,

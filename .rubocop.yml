@@ -23,3 +23,6 @@ Metrics/ParameterLists:
 
 Layout/LineLength:
   Enabled: false
+
+Lint/MissingSuper:
+  Enabled: false
