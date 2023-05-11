@@ -25,7 +25,7 @@ module TermiiRuby
         message_text: message_text,
         channel: channel,
         message_type: message_type,
-        pin_attampts: pin_attampts,
+        pin_attempts: pin_attampts,
         pin_length: pin_length,
         pin_placeholder: pin_placeholder,
         pin_time_to_live: pin_time_to_live

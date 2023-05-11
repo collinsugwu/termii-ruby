@@ -19,7 +19,7 @@ module TermiiRuby
       @client.make_post_request(CREATE_SENDER, data)
     end
 
-    def fetch_sender
+    def fetch_senders
       @client.make_get_request(FETCH_SENDER)
     end
 

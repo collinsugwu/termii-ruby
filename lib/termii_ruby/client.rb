@@ -18,10 +18,10 @@ module TermiiRuby
         req.headers["Content-Type"] = "application/json"
       end
 
-      return response.body if response.success?
-
-      msg = "unsuccessful request with status code #{response.status}"
-      raise TermiiRuby::Error, msg
+      {
+        status: response.status,
+        data: response.body
+      }
     end
 
     def make_post_request(endpoint, args = {})
@@ -29,13 +29,13 @@ module TermiiRuby
       args[:api_key] = @api_key
       response = @connection.post(url) do |req|
         req.headers["Content-Type"] = "application/json"
-        req.body = args
+        req.body = args.to_json
       end
 
-      return response.body if response.success?
-
-      msg = "unsuccessful request with status code #{response.status}"
-      raise TermiiRuby::Error, msg
+      {
+        status: response.status,
+        data: response.body
+      }
     end
 
     private
@@ -49,7 +49,6 @@ module TermiiRuby
         f.options.timeout = 30
         f.request :retry # retry transient failures
         f.response :json # decode response bodies as JSON
-        f.response :raise_error
       end
     end
 
