@@ -5,17 +5,18 @@ require_relative "lib/termii_ruby/version"
 Gem::Specification.new do |spec|
   spec.name = "termii_ruby"
   spec.version = TermiiRuby::VERSION
-  spec.authors = ["collinsugwu"]
+  spec.authors = ["Collins Ugwu"]
   spec.email = ["collinsuchinaka@gmail.com"]
 
   spec.summary = "A Ruby gem for integrating Termii messaging API"
   spec.description = "A Ruby gem for integrating Termii messaging API"
-  spec.homepage = "https://github.com/collinsugwu"
+  spec.homepage = "https://github.com/collinsugwu/termii-ruby"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
-
-  spec.metadata["homepage_uri"] = "https://github.com/collinsugwu"
-  spec.metadata["source_code_uri"] = "https://github.com/collinsugwu"
+  spec.licenses = ['Nonstandard']
+  spec.extra_rdoc_files = %w(LICENSE)
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = "https://github.com/collinsugwu/termii-ruby"
   spec.metadata["changelog_uri"] = "https://github.com/collinsugwu"
 
   # Specify which files should be added to the gem when it is released.
