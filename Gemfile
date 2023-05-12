@@ -9,6 +9,7 @@ gem "rake", "~> 13.0"
 gem "rspec", "~> 3.0"
 
 gem "faraday", "~> 2.7", ">= 2.7.4"
-gem "rubocop", "~> 1.21"
+gem 'faraday-retry'
 
-gem 'pry', '~> 0.13.1'
+gem "rubocop", "~> 1.21"
+gem "pry", "~> 0.13.1"
