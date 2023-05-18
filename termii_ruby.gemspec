@@ -13,8 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/collinsugwu/termii-ruby"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
-  spec.licenses = ["Nonstandard"]
-  spec.extra_rdoc_files = %w[LICENSE]
+
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/collinsugwu/termii-ruby"
   spec.metadata["changelog_uri"] = "https://github.com/collinsugwu"
