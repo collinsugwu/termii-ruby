@@ -7,6 +7,9 @@ module TermiiRuby
       CREATE_SENDER = "sender-id/request"
       SEND_OTP_TOKEN = "sms/otp/send"
       VERIFY_TOKEN = "sms/otp/verify"
+      SEND_VOICE_CALL = "sms/otp/call"
+      SEND_VOICE_TOKEN = "sms/otp/send/voice"
+      SEND_IN_APP_TOKEN  = "sms/otp/generate"
     end
   end
 end

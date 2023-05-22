@@ -11,5 +11,11 @@ module TermiiRuby
     def verify
       raise NotImplementedError, "Subclasses must implement the verify method"
     end
+
+    def update_attributes(attrs)
+      attrs.each do |key, value| 
+        self[key.to_s] = value
+      end 
+    end
   end
 end

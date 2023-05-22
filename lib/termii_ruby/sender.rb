@@ -5,7 +5,7 @@ require_relative "termii"
 require_relative "client"
 
 module TermiiRuby
-  class TermiiSender < TermiiRuby::Termii
+  class Sender < TermiiRuby::Termii
     def initialize(api_key)
       @client = TermiiRuby::Client.new(api_key)
     end

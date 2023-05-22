@@ -5,7 +5,7 @@ require "faraday"
 require "faraday/retry"
 
 module TermiiRuby
-  class Client
+  class Client < TermiiRuby::AbstractClient
     def initialize(api_key)
       @api_key = api_key
       @connection = faraday_connection
