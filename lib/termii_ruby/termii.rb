@@ -13,9 +13,9 @@ module TermiiRuby
     end
 
     def update_attributes(attrs)
-      attrs.each do |key, value| 
+      attrs.each do |key, value|
         self[key.to_s] = value
-      end 
+      end
     end
   end
 end
