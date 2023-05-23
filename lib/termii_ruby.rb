@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 require_relative "termii_ruby/version"
-require_relative "termii_ruby/termii_sender"
-require_relative "termii_ruby/termii_token"
+require_relative "termii_ruby/sender"
+require_relative "termii_ruby/token"
+require_relative "termii_ruby/insight"
 
 module TermiiRuby
   class Error < StandardError; end
