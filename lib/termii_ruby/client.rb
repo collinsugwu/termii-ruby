@@ -11,11 +11,16 @@ module TermiiRuby
       @connection = faraday_connection
     end
 
-    def make_get_request(endpoint, _args = {})
+    def make_get_request(endpoint, args = {})
       url = request_url(endpoint)
       response = @connection.get(url) do |req|
         req.params["api_key"] = @api_key
         req.headers["Content-Type"] = "application/json"
+        if args.present?
+          args.each do |key, value|
+            req.params[key.to_s] = value.to_s
+          end
+        end
       end
 
       {

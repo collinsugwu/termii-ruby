@@ -6,17 +6,9 @@ require_relative "client"
 
 module TermiiRuby
   class Token < TermiiRuby::Termii
-    attr_accessor :message_text, :pin_type, :channel, :pin_attampts, :pin_length, :pin_time_to_live, :pin_placeholder
-
     def initialize(api_key)
+      super
       @client = TermiiRuby::Client.new(api_key)
-      @message_text = "NUMERIC"
-      @pin_type = "NUMERIC"
-      @channel = "generic"
-      @pin_attampts = 3
-      @pin_length = 4
-      @pin_time_to_live = 10
-      @pin_placeholder = "< 1234 >"
     end
 
     def send_otp_token(to, from, message_text)

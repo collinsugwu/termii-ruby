@@ -9,7 +9,11 @@ module TermiiRuby
       VERIFY_TOKEN = "sms/otp/verify"
       SEND_VOICE_CALL = "sms/otp/call"
       SEND_VOICE_TOKEN = "sms/otp/send/voice"
-      SEND_IN_APP_TOKEN  = "sms/otp/generate"
+      SEND_IN_APP_TOKEN = "sms/otp/generate"
+      GET_BALANCE = "get-balance"
+      SEARCH = "check/dnd"
+      STATUS = "insight/number/query"
+      HISTORY = "sms/inbox"
     end
   end
 end
