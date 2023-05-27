@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require "webmock"
 
 RSpec.describe TermiiRuby::Sender do
