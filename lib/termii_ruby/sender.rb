@@ -7,6 +7,7 @@ require_relative "client"
 module TermiiRuby
   class Sender < TermiiRuby::Termii
     def initialize(api_key)
+      super()
       @client = TermiiRuby::Client.new(api_key)
     end
 

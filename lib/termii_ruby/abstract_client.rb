@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+
 module TermiiRuby
   class AbstractClient
     def make_get_request

@@ -3,6 +3,7 @@
 # Handles external request to termii
 require "faraday"
 require "faraday/retry"
+require_relative "abstract_client"
 
 module TermiiRuby
   class Client < TermiiRuby::AbstractClient
@@ -16,7 +17,7 @@ module TermiiRuby
       response = @connection.get(url) do |req|
         req.params["api_key"] = @api_key
         req.headers["Content-Type"] = "application/json"
-        if args.present?
+        unless args.empty?
           args.each do |key, value|
             req.params[key.to_s] = value.to_s
           end

@@ -9,7 +9,7 @@ module TermiiRuby
     QUERY = "phone_number"
 
     def initialize(api_key)
-      super
+      super()
       @client = TermiiRuby::Client.new(api_key)
     end
 
