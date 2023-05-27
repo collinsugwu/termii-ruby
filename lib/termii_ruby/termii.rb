@@ -1,40 +1,39 @@
 # frozen_string_literal: true
 
-# Base Class
-
 require_relative "mixins/endpoints"
 
 #
-# <Description>
+# @author Collins Ugwu
+# Base Termii Class
 #
 module TermiiRuby
   class Termii
     include TermiiRuby::Mixins::Endpoints
-
-    # @return [<Type>] <description>
-    attr_accessor :message_text
-
-    # @return [<Type>] <description>
+    
+    # @return [Stiring] Enum: "NUMERIC" "ALPHANUMERIC" Type of message that will be generated and sent as part of the OTP message. You can set message type to numeric or alphanumeric
+    attr_accessor :message_type
+    
+    # @return [String] "NUMERIC"
     attr_accessor :pin_type
 
-    # @return [<Type>] <description>
+    # @return [<String>] This is the route through which the message is sent. It is either dnd, WhatsApp, or generic or email
     attr_accessor :channel
 
-    # @return [<Type>] <description>
+    # @return [Integer] Example: 3 Represents the number of times the PIN can be attempted before expiration. It has a minimum of one attempt
     attr_accessor :pin_attempts
 
-    # @return [<Type>] <description>
+    # @return [Integer] The length of the PIN code.It has a minimum of 4 and maximum of 8.
     attr_accessor :pin_length
 
-    # @return [<Type>] <description>
+    # @return [Interger] Represents how long the PIN is valid before expiration. The time is in minutes. The minimum time value is 0 and the maximum time value is 60
     attr_accessor :pin_time_to_live
 
-    # @return [<Type>] <description>
+    # @return [<Type>] Example: "< 1234 >" PIN placeholder. Right before sending the message, PIN code placeholder will be replaced with generate PIN code.
     attr_accessor :pin_placeholder
+  
+    # @return [String] <description>
+    attr_accessor :country_code
 
-    #
-    # <Description>
-    #
     def initialize
       @message_type = "NUMERIC"
       @pin_type = "NUMERIC"
@@ -47,9 +46,9 @@ module TermiiRuby
     end
 
     #
-    # <Description>
+    # Subclasses must implement the verify method
     #
-    # @return [<Type>] <description>
+    # @return [Object] NotImplementedError
     #
     def verify
       raise NotImplementedError, "Subclasses must implement the verify method"
