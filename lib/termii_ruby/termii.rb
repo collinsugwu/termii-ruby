@@ -16,7 +16,7 @@ module TermiiRuby
     # @return [String] "NUMERIC"
     attr_accessor :pin_type
 
-    # @return [<String>] This is the route through which the message is sent. It is either dnd, WhatsApp, or generic or email
+    # @return [String] This is the route through which the message is sent. It is either dnd, WhatsApp, or generic or email
     attr_accessor :channel
 
     # @return [Integer] Example: 3 Represents the number of times the PIN can be attempted before expiration. It has a minimum of one attempt
@@ -28,10 +28,10 @@ module TermiiRuby
     # @return [Interger] Represents how long the PIN is valid before expiration. The time is in minutes. The minimum time value is 0 and the maximum time value is 60
     attr_accessor :pin_time_to_live
 
-    # @return [<Type>] Example: "< 1234 >" PIN placeholder. Right before sending the message, PIN code placeholder will be replaced with generate PIN code.
+    # @return [String] Example: "< 1234 >" PIN placeholder. Right before sending the message, PIN code placeholder will be replaced with generate PIN code.
     attr_accessor :pin_placeholder
 
-    # @return [String] <description>
+    # @return [String] Represents short alphabetic codes developed to represent countries
     attr_accessor :country_code
 
     def initialize

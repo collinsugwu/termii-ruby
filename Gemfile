@@ -10,6 +10,9 @@ gem "rspec", "~> 3.0"
 
 gem "faraday", "~> 2.7", ">= 2.7.4"
 gem "faraday-retry"
+group :test do
+    gem "webmock"
+end
 
 # gem "pry", "~> 0.13.1"
 gem "rubocop", "~> 1.21"
