@@ -5,6 +5,7 @@ require_relative "termii"
 require_relative "client"
 
 module TermiiRuby
+  #
   # @author Collins Ugwu
   # Retrieve real-time delivery report of messages sent to customers as well as the status of their contacts
   #
@@ -46,7 +47,7 @@ module TermiiRuby
     end
 
     #
-    # <Description>
+    # The status API allows businesses to detect if a number is fake or has ported to a new network.
     #
     # @param [<Type>] phone_number Represents the phone number to be verified. Phone number must be in the international format (Example: 2348753243651)
     # @param [Hash] query Hash of the query params

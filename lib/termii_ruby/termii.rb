@@ -2,17 +2,17 @@
 
 require_relative "mixins/endpoints"
 
-#
-# @author Collins Ugwu
-# Base Termii Class
-#
 module TermiiRuby
+  #
+  # @author Collins Ugwu
+  # Base Termii Class
+  #
   class Termii
     include TermiiRuby::Mixins::Endpoints
-    
+
     # @return [Stiring] Enum: "NUMERIC" "ALPHANUMERIC" Type of message that will be generated and sent as part of the OTP message. You can set message type to numeric or alphanumeric
     attr_accessor :message_type
-    
+
     # @return [String] "NUMERIC"
     attr_accessor :pin_type
 
@@ -30,7 +30,7 @@ module TermiiRuby
 
     # @return [<Type>] Example: "< 1234 >" PIN placeholder. Right before sending the message, PIN code placeholder will be replaced with generate PIN code.
     attr_accessor :pin_placeholder
-  
+
     # @return [String] <description>
     attr_accessor :country_code
 

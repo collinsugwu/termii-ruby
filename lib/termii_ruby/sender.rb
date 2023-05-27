@@ -5,6 +5,7 @@ require_relative "termii"
 require_relative "client"
 
 module TermiiRuby
+  #
   # @author Collins Ugwu
   # Sender Class for creating and fetching the sender ID
   #

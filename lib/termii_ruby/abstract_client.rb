@@ -2,6 +2,7 @@
 
 module TermiiRuby
   #
+  # @author Collins
   # A class to enforce the request methods
   # @abstract
   #

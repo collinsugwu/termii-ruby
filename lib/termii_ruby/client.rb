@@ -5,11 +5,11 @@ require "faraday"
 require "faraday/retry"
 require_relative "abstract_client"
 
-#
-# @author Collins Ugwu
-# Client class to make request to Termii endpoints
-#
 module TermiiRuby
+  #
+  # @author Collins Ugwu
+  # Client class to make request to Termii endpoints
+  #
   class Client < TermiiRuby::AbstractClient
     def initialize(api_key)
       @api_key = api_key
