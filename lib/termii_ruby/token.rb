@@ -16,7 +16,7 @@ module TermiiRuby
     end
 
     #
-    # <Description>
+    # The send token API allows businesses trigger one-time-passwords (OTP) across any available messaging channel on Termii. One-time-passwords created are generated randomly and there's an option to set an expiry time.
     #
     # @param [string] to Represents the email address if the channel is set to email (Example: testshola@termii.com). It represents the destination phone number if other channels are selected. Phone number must be in the international format (Example: 23490126727)
     # @param [string] from Represents the configuration ID if the channel is set to email (Example: 0a53c416-uocj-95af-ab3c306aellc). It can be found on your Termii dashboard. If other channels are selected, it represents a sender ID which can be alphanumeric or numeric. Alphanumeric sender ID length should be between 3 and 11 characters (Example:CompanyName)
