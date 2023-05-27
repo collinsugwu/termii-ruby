@@ -24,10 +24,7 @@ module TermiiRuby
         end
       end
 
-      {
-        status: response.status,
-        data: response.body
-      }
+      request_response(response)
     end
 
     def make_post_request(endpoint, args = {})
@@ -38,13 +35,17 @@ module TermiiRuby
         req.body = args.to_json
       end
 
+      request_response(response)
+    end
+
+    private
+
+    def request_response(response)
       {
         status: response.status,
         data: response.body
       }
     end
-
-    private
 
     def request_url(endpoint)
       "#{base_url}/#{endpoint}"

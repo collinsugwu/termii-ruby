@@ -57,10 +57,10 @@ module TermiiRuby
       @client.make_post_request(SEND_IN_APP_TOKEN, data)
     end
 
-    def verify(pin_id, pin)
+    def verify(pin_id, token)
       data = {
         pin_id: pin_id,
-        pin: pin
+        pin: token
       }
       @client.make_post_request(VERIFY_TOKEN, data)
     end
