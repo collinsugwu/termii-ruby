@@ -58,7 +58,7 @@ module TermiiRuby
     end
 
     #
-    # <Description>
+    # The voice call API enables you to send messages from your application through our voice channel to a phone number. Only one-time-passwords (OTP) are allowed for now and these OTPs can not be verified using our Verify Token API.
     #
     # @param [String] phone_number The destination phone number. Phone number must be in the international format (Example: 23490126727)
     # @param [Numeric] code Example: 3344, The code you want your users to receive. It has to be numeric and length must be between 4 and 8 digits.
