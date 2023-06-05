@@ -20,7 +20,7 @@ RSpec.describe TermiiRuby::Token do
 
       stub_request(:post, "https://api.ng.termii.com/api/sms/otp/send")
         .with(
-          body: "{\"to\":\"2348109077743\",\"from\":\"ACME\",\"message_text\":\" your token is < 1234 > \",\"channel\":\"generic\",\"message_type\":\"NUMERIC\",\"pin_attempts\":3,\"pin_length\":4,\"pin_placeholder\":\"< 1234 >\",\"pin_time_to_live\":10,\"pin_type\":\"NUMERIC\",\"api_key\":null}",
+          body: {"to": "2348109077743","from": "ACME", "message_text": " your token is < 1234 > ","channel": "generic", "message_type": "NUMERIC", "pin_attempts": 3, "pin_length": 4, "pin_placeholder": "< 1234 >", "pin_time_to_live": 10, "pin_type": "NUMERIC", "api_key": nil},
           headers: {
             "Accept" => "*/*",
             "Accept-Encoding" => "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
@@ -49,7 +49,7 @@ RSpec.describe TermiiRuby::Token do
 
       stub_request(:post, "https://api.ng.termii.com/api/sms/otp/send/voice")
         .with(
-          body: "{\"phone_number\":\"2348109077743\",\"pin_attempts\":3,\"pin_length\":4,\"pin_time_to_live\":10,\"api_key\":null}",
+          body: {"phone_number": "2348109077743", "pin_attempts": 3, "pin_length":4, "pin_time_to_live":10, "api_key": nil},
           headers: {
             "Accept" => "*/*",
             "Accept-Encoding" => "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
@@ -76,7 +76,7 @@ RSpec.describe TermiiRuby::Token do
 
       stub_request(:post, "https://api.ng.termii.com/api/sms/otp/verify")
         .with(
-          body: "{\"pin_id\":\"c8dcd048-5e7f-4347-8c89-4470c3af0b\",\"pin\":\"195558\",\"api_key\":null}",
+          body: {"pin_id": "c8dcd048-5e7f-4347-8c89-4470c3af0b","pin": "195558","api_key": nil},
           headers: {
             "Accept" => "*/*",
             "Accept-Encoding" => "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
