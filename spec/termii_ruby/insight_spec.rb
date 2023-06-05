@@ -90,3 +90,4 @@ RSpec.describe TermiiRuby::Insight do
     end
   end
 end
+
