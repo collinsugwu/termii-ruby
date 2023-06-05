@@ -11,7 +11,7 @@ gem "rspec", "~> 3.0"
 gem "faraday", "~> 2.7", ">= 2.7.4"
 gem "faraday-retry"
 group :test do
-  gem "webmock"
+  gem "webmock", "~> 3.18", ">= 3.18.1"
 end
 
 # gem "pry", "~> 0.13.1"

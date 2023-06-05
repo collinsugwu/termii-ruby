@@ -26,3 +26,6 @@ Layout/LineLength:
 
 Lint/MissingSuper:
   Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false

@@ -71,7 +71,7 @@ DEPENDENCIES
   rspec (~> 3.0)
   rubocop (~> 1.21)
   termii_ruby!
-  webmock
+  webmock (~> 3.18, >= 3.18.1)
 
 BUNDLED WITH
    2.3.5
