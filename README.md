@@ -22,8 +22,89 @@ Or install it yourself as:
 
 ## Usage
 
+## Token
+Initialize the token object
+```
+token = TermiiRuby::Token.new(ENV["TERMII_API_KEY"])
+```
+Send OTP
 
+to: phone number
 
+from: sender id
+```
+otp = token.send_otp_token(to, from, message_text)
+```
+Send Voice Token
+
+```
+voice_token = token.send_voice_token(phone_number)
+```
+
+Send Voice Call
+
+```
+voice_call = token.send_voice_call(phone_number, code)
+```
+
+Send In App Token
+
+```
+in_app_token = token.send_in_app_token(phone_number)
+```
+
+Verify Token
+```
+verify = token.verify(pin_id, token)
+```
+
+## Sender
+Initialize the Sender object
+```
+sender = TermiiRuby::Sender.new(ENV["TERMII_API_KEY"])
+```
+Fetch Senders
+```
+fetch_senders = sender.fetch_senders
+```
+Create Senders
+```
+create_sender = sender.create_sender(sender_id, usecase, company)
+```
+
+## Insight
+Initialize the Insight object
+```
+insight = TermiiRuby::Insight.new(ENV["TERMII_API_KEY"])
+```
+Fetch Balance
+```
+balance = insight.balance
+```
+Search
+```
+search = insight.search(phone_number)
+```
+Status
+```
+status = insight.status(phone_number)
+```
+History
+```
+history = insight.history
+```
+## Available getters and setters for all objects
+```
+    message_type  <String>
+    pin_type <String>
+    channel <generic>
+    pin_attempts <Integer>
+    pin_length <Integer>
+    pin_time_to_live <Integer>
+    pin_placeholder <String>
+    country_code <String>
+
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
