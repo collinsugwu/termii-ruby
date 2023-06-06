@@ -1,15 +1,12 @@
 # TermiiRuby
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/termii_ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby gem for integrating Termii api [termii.com](termii.com)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'termii_ruby', '~> 0.1.0'
+gem 'termii_ruby', '~> 0.1.1'
 ```
 
 And then execute:
