@@ -3,7 +3,7 @@ A Ruby gem for integrating Termii api [termii.com](termii.com)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this code line to your application's Gemfile:
 
 ```ruby
 gem 'termii_ruby', '~> 0.1.1'
